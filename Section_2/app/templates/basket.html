@@ -1,0 +1,74 @@
+
+<html>
+    <head>
+      {%extends 'base.html'%}
+</head>
+<body>
+
+{%block content%}
+<h1>Basket</h1>
+    <hr>
+{%if basket[0].Ipad > 0%}
+    <div class="row-id">
+    <h3>Ipad: x{basket[0].Ipad}</h3><!--prints data for the current assessment in the loop -->
+</div>
+{%endif%}
+{%if basket[0].Lenovo_Thinkbook > 0%}
+    <div class="row-id">
+    <h3> Lenovo Thinkbook: x{{basket[0].Lenovo_Thinkbook}}</h3><!--prints data for the current assessment in the loop -->
+</div>
+{%endif%}
+{%if basket[0].Lenovo_Thinkpad_Laptop > 0%}
+    <div class="row-id">
+    <h3>Lenovo Thinkpad: x{{basket[0].Lenovo_Thinkpad_Laptop}}</h3><!--prints data for the current assessment in the loop -->
+</div>
+{%endif%}
+{%if basket[0].Xiaomi_Laptop > 0%}
+    <div class="row-id">
+    <h3>Xiaomi Laptop: x{{basket[0].Xiaomi_Laptop}}</h3><!--prints data for the current assessment in the loop -->
+</div>
+{%endif%}
+{%if basket[0].Samsung_OLED_TV > 0%}
+    <div class="row-id">
+    <h3>Samsung OLED TV: x{{basket[0].Samsung_OLED_TV}}</h3><!--prints data for the current assessment in the loop -->
+</div>
+{%endif%}
+{%if basket[0].Macbook > 0%}
+    <div class="row-id">
+    <h3>Macbook: x{{basket[0].Macbook}}</h3><!--prints data for the current assessment in the loop -->
+</div>
+{%endif%}
+{%if basket[0].One_Plus_9 > 0%}
+    <div class="row-id">
+    <h3>One Plus 9: x{{basket[0].One_Plus_9}}</h3><!--prints data for the current assessment in the loop -->
+</div>
+{%endif%}
+{%if basket[0].I_Mac > 0%}
+    <div class="row-id">
+    <h3>Imac: x{{basket[0].I_Mac}}</h3><!--prints data for the current assessment in the loop -->
+</div>
+{%endif%}
+{%if basket[0].Iphone_12_pro > 0%}
+    <div class="row-id">
+    <h3>Iphone 12 pro: x{{basket[0].Iphone_12_pro}}</h3><!--prints data for the current assessment in the loop -->
+</div>
+{%endif%}
+{%if basket[0].Mechanical_Keyboard > 0%}
+    <div class="row-id">
+    <h3>Mechanical Keyboard: x{{basket[0].Mechanical_Keyboard}}</h3><!--prints data for the current assessment in the loop -->
+</div>
+{%endif%}
+<br>
+<br>
+<br>
+<br>
+<h2>Cost:£{{cost}}</h2>
+
+
+{%endblock%}
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+INFO:app:index route request
+INFO:app:index route request
+INFO:werkzeug: * Running on http://127.0.0.1:3000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:app:index route request
+INFO:werkzeug: * Detected change in '/home/cserv1_a/soc_ug/sc20tbm/Section_2/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with stat

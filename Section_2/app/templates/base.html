@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <title>Techno_hub</title><!--title for page -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel = "stylesheet"
+ type = "text/css"
+ href = "{{ url_for('static',filename='uniformdesign.css') }}" >
+ <script
+  type = "text/javascript"
+  href = "{{ url_for('static',filename='javascript.js') }}" ></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--stylesheets used by all webpages-->
+  </head>
+  <body onload="checkCookie()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">{{username}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('Shop_site')}}">Shop</a><!--when clicked go to the To complete page-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('Apple')}}">Apple Products</a><!--when clicked go to the To complete page-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('tv_keyboard')}}">TVs and Keyboards</a><!--when clicked go to the To complete page-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('Laptop')}}">Laptops</a><!--when clicked go to the Create new assessment page-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('Shopping_cart')}}">Shopping_Basket</a><!--when clicked go to the Create new assessment page-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('ChangePassword')}}">Change Password</a><!--when clicked go to the Create new assessment page-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('Sign_Out')}}">Sign Out</a><!--when clicked go to the Create new assessment page-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa rt" style="font-size:24px">&#xf07a;</i>
+          <span class="right" id="cart">{{cart_size}}</span></a>
+      </li>
+      <li class="nav-item">
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"></h2>
+      </li>
+
+      <li class="nav-item">
+        <button type="button" onclick="themeToggle()">Theme Toggle</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+<script>
+(function() {
+  let onpageLoad = localStorage.getItem("theme") || "";
+  let element = document.body;
+  element.classList.add(onpageLoad);
+  document.getElementById("theme").textContent =
+    localStorage.getItem("theme") || "light";
+})();
+
+function themeToggle() {
+  let element = document.body;
+  element.classList.toggle("dark-mode");
+
+  let theme = localStorage.getItem("theme");
+  if (theme && theme === "dark-mode") {
+    localStorage.setItem("theme", "");
+  } else {
+    localStorage.setItem("theme", "dark-mode");
+  }
+
+  document.getElementById("theme").textContent = localStorage.getItem("theme");
+}
+
+</script>
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("hello");
+  li = ul.getElementsByTagName("p");
+  for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+      } else {
+          li[i].style.display = "none";
+      }
+  }
+}
+
+function darkmode(){
+  var element = document.body;
+     element.classList.toggle("dark-mode");
+     if ($("#darkmodebtn").val()==0){
+       $("#darkmodebtn").val(1);
+     }
+     else{
+       $("#darkmodebtn").val(1);
+     }
+}
+</script>
+      {% block content %}{% endblock %}
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>

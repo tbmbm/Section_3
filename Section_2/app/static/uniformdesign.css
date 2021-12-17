@@ -1,0 +1,83 @@
+
+body{
+  height:100%;
+}
+.right{
+  position: absolute;
+  right:0;
+}
+.rt{
+  position: absolute;
+  right:30px;
+}
+.centres{
+  position: absolute;
+  right:50%;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.centre{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+.design{/*design for new assessment button */
+  background-color:black;
+  color:white;
+  padding: 10px;
+  border-radius: 8px;
+}
+.designs{/* design for to complete button */
+  background-color:black;
+  color:white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: 10%;
+}
+.design:hover{/*when hovering over the button change the colour to blue */
+  background-color:blue;
+}
+.designs:hover{/* when hovering over the button change the colour to green */
+  background-color:green;
+}
+.not_box{/*red block */
+  background-color:red;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 2%;
+}
+.done_box{/*green block */
+  background-color:green;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 2%;
+}
+.next_to{/*text inline with blocks */
+display: inline-block;
+}
+.next_tos{
+display: inline-block;
+}
+.not_boxs{
+  background-color:red;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 2%;
+}
+.red:first-of-type>.not_boxs:first-child{/* sets the first row on to complete page dark red as it is the red block (.not_boxs) first row */
+  background-color: #8b0000;
+}
+
+.box_size{
+  box-sizing:  content-box;
+  width:        70%;
+
+}
+p,h3 {
+  padding-left:15px;
+}
+.xtr{
+  padding-left:20px;
+}
